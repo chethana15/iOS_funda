@@ -30,6 +30,7 @@ func insertAtLastPosition(value: T){
 
     if head == nil{
         head = newNode
+        return
     }else{
         var current = head
         while current!.next != nil{
@@ -46,11 +47,11 @@ func printLinkedList(){
 
     }
     var current = head
-        while current!.next != nil{
+        while current != nil{
             print("current value: \(current!.value)")
-            current = current!.next
+            current = current?.next
         } 
-    print("current value: \(current!.value)")
+        
 }
 
 }
