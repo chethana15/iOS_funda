@@ -42,6 +42,11 @@ class LinkedList<T>{
 
     //Search for the element & display its index.
 
+//  T is a generic type and doesn't conform to the Equatable protocol, 
+// you won't be able to use the equality operator (==) directly. 
+// In that case, you should update your method to accept a closure that can perform the equality check.
+
+
     func giveIndexOfAnElementInList(equals: (T) -> Bool){
 
         if head == nil{
@@ -78,5 +83,6 @@ list.printList()
 
 //Search for the number 7 & display its index.
 list.giveIndexOfAnElementInList { $0 == 7 }
+
 
 
